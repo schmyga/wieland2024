@@ -1,9 +1,50 @@
+/* Общие стили для всех страниц */
 body {
   background-color: #000000; /* Черный фон */
   color: #ffffff; /* Белый текст */
   font-family: Arial, sans-serif; /* Шрифт */
   margin: 0;
   padding: 0;
+}
+
+/* Стили для ссылок */
+a {
+  color: #ffffff; /* Белый цвет ссылок */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cccccc; /* Светло-серый цвет ссылок при наведении */
+}
+
+/* Стили для меню */
+.menu-container {
+  background-color: #111111; /* Темно-серый цвет меню */
+}
+
+.menu-toggle span {
+  background-color: #ffffff; /* Белый цвет линий меню */
+}
+
+.menu ul li a {
+  color: #ffffff; /* Белый цвет ссылок в меню */
+}
+
+.menu ul li a:hover {
+  color: #cccccc; /* Светло-серый цвет ссылок в меню при наведении */
+}
+
+/* Стили для контента */
+.content-section {
+  padding: 20px;
+}
+
+/* Стили для футера */
+footer {
+  background-color: #111111; /* Темно-серый цвет футера */
+  color: #ffffff; /* Белый цвет текста в футере */
+  padding: 10px;
+  text-align: center;
 }
 .marquee {
     width: 100%;
