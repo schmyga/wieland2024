@@ -6,7 +6,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.logo {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 /* Стили для ссылок */
 a {
   color: #ffffff; /* Белый цвет ссылок */
