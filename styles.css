@@ -164,6 +164,7 @@ footer {
   .menu li {
     margin: 10px;
   }
+}
 @keyframes example {
   0%   {color: red;}
   25%  {color: yellow;}
