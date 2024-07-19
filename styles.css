@@ -6,14 +6,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .logo {
   max-width: 100px;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
 /* Стили для ссылок */
 a {
   color: #ffffff; /* Белый цвет ссылок */
@@ -27,71 +25,23 @@ a:hover {
 /* Стили для меню */
 .menu-container {
   background-color: #111111; /* Темно-серый цвет меню */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(-100%);
 }
 
-.menu-container.open {
-  transform: translateX(0);
+.menu-toggle span {
+  background-color: #ffffff; /* Белый цвет линий меню */
 }
 
-.menu-toggle {
-  position: absolute;
-  top: 20px;
-  right: -40px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: block;
+.menu ul li a {
+  color: #ffffff; /* Белый цвет ссылок в меню */
 }
 
-.menu-line {
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #1dbec0;
-  margin-bottom: 6px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.menu-container.open .menu-line:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-.menu-container.open .menu-line:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-container.open .menu-line:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu li {
-  margin-bottom: 10px;
-}
-
-.menu a {
-  color: #1dbec0;
-  text-decoration: none;
+.menu ul li a:hover {
+  color: #cccccc; /* Светло-серый цвет ссылок в меню при наведении */
 }
 
 /* Стили для контента */
 .content-section {
   padding: 20px;
-  margin-left: 220px; /* Добавлено, чтобы избежать наложения контента на меню */
 }
 
 /* Стили для футера */
@@ -100,17 +50,14 @@ footer {
   color: #ffffff; /* Белый цвет текста в футере */
   padding: 10px;
   text-align: center;
-  margin-left: 220px; /* Добавлено, чтобы избежать наложения футера на меню */
 }
-
-/* Стили для бегущей строки */
 .marquee {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   animation: marquee 20s linear infinite;
-  background-color: #000000; /* Черный фон, как и общий фон страницы */
-  color: #ffffff; /* Белый цвет текста, чтобы хорошо сочетался с общим стилем */
+  background-color: #00FFFF;
+  color: #000000;
   padding: 10px 0;
 }
 
@@ -119,18 +66,72 @@ footer {
   100% { text-indent: -100% }
 }
 
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #1dbec0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .menu-container.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .menu-line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #1dbec0;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-container.open .menu-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .menu-container.open .menu-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-container.open .menu-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .menu a {
+    color: #1dbec0;
+    text-decoration: none;
+  }
 /* Стили для больших экранов */
 @media (min-width: 1200px) {
   .menu-container {
     width: 250px;
-  }
-
-  .content-section {
-    margin-left: 270px; /* Увеличено отступление для контента на больших экранах */
-  }
-
-  footer {
-    margin-left: 270px; /* Увеличено отступление для футера на больших экранах */
   }
 }
 
@@ -139,18 +140,10 @@ footer {
   .menu-container {
     width: 180px;
   }
-
-  .content-section {
-    margin-left: 200px; /* Увеличено отступление для контента на средних экранах */
-  }
-
-  footer {
-    margin-left: 200px; /* Увеличено отступление для футера на средних экранах */
-  }
 }
 
 /* Стили для мобильных устройств */
-@media (max-width: 765px) {
+@media (max-width: 76px) {
   .menu-container {
     width: 100%;
     height: auto;
@@ -171,12 +164,45 @@ footer {
   .menu li {
     margin: 10px;
   }
+}
+@keyframes example {
+  0%   {color: red;}
+  25%  {color: yellow;}
+  50%  {color: blue;}
+  75%  {color: green;}
+  100% {color: red;}
+}
 
-  .content-section {
-    margin-left: 0; /* Обнулено отступление для контента на мобильных устройствах */
-  }
+h1 {
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
 
-  footer {
-    margin-left: 0; /* Обнулено отступление для футера на мобильных устройствах */
+.contact-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 80%;
+}
+
+.contact-button:hover {
+  background-color: #555;
+}
+
+@media (min-width: 768px) {
+  .contact-button {
+    width: 50%;
   }
 }
