@@ -1,11 +1,3 @@
- marqueeElement.innerHTML = marqueeContent;
-
-  // Обработчик клика на меню-тоглер
-  document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('.menu').classList.toggle('show');
-  });
-
-
 window.addEventListener('DOMContentLoaded', function() {
   var marqueeElement = document.getElementById('news-ticker');
   var news = [
@@ -17,4 +9,11 @@ window.addEventListener('DOMContentLoaded', function() {
   news.forEach(function(item) {
     marqueeContent += `<span class="marquee-theme">${item.theme}</span><span class="marquee-message">${item.message}</span>`;
   });
- });
+
+  marqueeElement.innerHTML = marqueeContent;
+
+  // Обработчик клика на меню-тоглер
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('show');
+  });
+});
