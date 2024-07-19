@@ -150,11 +150,10 @@ footer {
     position: static;
     transform: none;
   }
-
   .menu-toggle {
     display: none;
   }
-
+}
   .menu ul {
     display: flex;
     flex-wrap: wrap;
