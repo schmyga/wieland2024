@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   // Обработчик клика на меню-тоглер
   document.querySelector('.menu-toggle').addEventListener('click', function() {
+    console.log('Клик на меню-тоглер');
     document.querySelector('.menu').classList.toggle('show');
   });
 });
