@@ -56,8 +56,8 @@ footer {
   overflow: hidden;
   white-space: nowrap;
   animation: marquee 20s linear infinite;
-  background-color: #00FFFF;
-  color: #000000;
+  background-color: #808080;
+  color: #120a8f;
   padding: 10px 0;
 }
 
