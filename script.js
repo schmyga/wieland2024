@@ -11,5 +11,11 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   marqueeElement.innerHTML = marqueeContent;
+
+  // Обработчик клика на меню-тоглер
+  document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.menu').classList.toggle('show');
+  });
 });
+
 
